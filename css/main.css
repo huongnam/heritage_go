@@ -1,0 +1,104 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    color: #262626;
+}
+
+
+.header {
+    height: 80px;
+    width: 100%;
+    background-color: white;
+    color: #262626;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.975);
+}
+
+.header__left {
+    display: flex;
+    flex-grow: 1;
+}
+
+.header__center {    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 600px;
+    
+}
+
+.header__center__logo {
+    width: 100px;
+    height: auto;
+    align-self: left;
+}
+
+.header__center__logo:hover {
+    transform: scale(1.1);
+    transition-duration: 100ms;
+    transition-timing-function: ease-out;
+}
+
+.header__center__areaName {
+    margin-right: 24px;
+    display: flex;
+    align-items: flex-start;    
+    align-self: left      
+}
+
+.header__center__areaName__text {
+    font-family: Arial;
+    text-align: center;
+    align-self: right;
+}    
+
+.header__center__areaName__text__primary {
+    font-size: 18px;
+}
+
+.header__center__areaName__text__secondary {
+    font-size: 14px;
+}
+
+.header__center__areaName__compass {
+    font-size: 24px;
+    text-align: center;
+    margin: 6px;
+}
+
+.header__center__areaName__compassIcon--spin {
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+    0% { 
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.header__right {
+    flex-grow: 1;
+}
+
+.header__button {
+    font-family: Arial;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 3px;
+    border-color: #e6e6e6;
+    background-color: white;
+    padding: 8px;
+    margin: 24px;
+    align-self: left
+    
+}
