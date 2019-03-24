@@ -14,27 +14,25 @@ body {
     background-color: white;
     color: #262626;
     display: flex;
-    flex-direction: row;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.975);
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
 }
 
 .header__left {
     display: flex;
-    flex-grow: 1;
+    flex: 1 1 auto;
 }
 
-.header__center {    
+.header__center {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 600px;
-    
 }
 
 .header__center__logo {
     width: 100px;
     height: auto;
-    align-self: left;
 }
 
 .header__center__logo:hover {
@@ -43,42 +41,45 @@ body {
     transition-timing-function: ease-out;
 }
 
-.header__center__areaName {
-    margin-right: 24px;
+.header__center__area {
     display: flex;
-    align-items: flex-start;    
-    align-self: left      
+    align-items: flex-start;
 }
 
-.header__center__areaName__text {
+.header__center__area__text {
+    display: flex;
     font-family: Arial;
     text-align: center;
-    align-self: right;
-}    
+    flex-direction: column;
+}
 
-.header__center__areaName__text__primary {
+.header__center__area__text__primary {
     font-size: 18px;
 }
 
-.header__center__areaName__text__secondary {
+.header__center__area__text__secondary {
     font-size: 14px;
 }
 
-.header__center__areaName__compass {
+.header__center__area__compass {
     font-size: 24px;
-    text-align: center;
+    text-align: flex-start;
     margin: 6px;
+    margin-left: 6px;
+    margin-top: 0px;
 }
 
-.header__center__areaName__compassIcon--spin {
+.header__center__area__compass--spin {
     animation-name: spin;
     animation-duration: 2s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+
+
 }
 
 @keyframes spin {
-    0% { 
+    0% {
         transform: rotate(0deg);
     }
     100% {
@@ -87,18 +88,19 @@ body {
 }
 
 .header__right {
-    flex-grow: 1;
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: flex-end;
 }
 
-.header__button {
+.header__login_button {
     font-family: Arial;
     font-size: 14px;
     text-align: center;
     border-radius: 3px;
-    border-color: #e6e6e6;
+    border-color: rgba(230,230,230, 0.5);
     background-color: white;
-    padding: 8px;
     margin: 24px;
-    align-self: left
-    
+    padding: 16px;
+
 }
