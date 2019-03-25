@@ -30,38 +30,38 @@ body {
     width: 600px;
 }
 
-.header__center__logo {
+.header__logo {
     width: 100px;
     height: auto;
 }
 
-.header__center__logo:hover {
+.header__logo:hover {
     transform: scale(1.1);
     transition-duration: 100ms;
     transition-timing-function: ease-out;
 }
 
-.header__center__area {
+.header__area {
     display: flex;
     align-items: flex-start;
 }
 
-.header__center__area__text {
+.header__text {
     display: flex;
     font-family: Arial;
     text-align: center;
     flex-direction: column;
 }
 
-.header__center__area__text__primary {
+.header__primaryText {
     font-size: 18px;
 }
 
-.header__center__area__text__secondary {
+.header__secondaryText {
     font-size: 14px;
 }
 
-.header__center__area__compass {
+.header__compass {
     font-size: 24px;
     text-align: flex-start;
     margin: 6px;
@@ -69,7 +69,7 @@ body {
     margin-top: 0px;
 }
 
-.header__center__area__compass--spin {
+.header__compass--spin {
     animation-name: spin;
     animation-duration: 2s;
     animation-timing-function: linear;
@@ -93,7 +93,7 @@ body {
     justify-content: flex-end;
 }
 
-.header__login_button {
+.header__loginButton {
     font-family: Arial;
     font-size: 14px;
     text-align: center;
@@ -101,6 +101,101 @@ body {
     border-color: rgba(230,230,230, 0.5);
     background-color: white;
     margin: 24px;
-    padding: 16px;
+    padding: 12px;
+    width: max-content;
 
+}
+
+@media (max-width: 600px) {
+    body {
+        width: 100%;
+    }
+
+    .header__center__logo {
+        margin: 24px;
+    }
+
+    .header__center__area {
+        margin: 24px;
+        width: max-content;
+    }
+
+    .header__login_button {
+        margin: 24px;
+    }
+}
+
+@media (max-width: 415px) {
+  body {
+    zoom: 70%;
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    zoom: 55%;
+  }
+}
+
+@media (max-width: 320px) {
+  body {
+    zoom: 50%;
+  }
+}
+
+/****  floating-Lable style start ****/
+.floating-label { 
+    position:relative; 
+    margin-bottom:20px; 
+}
+
+.floating-input , .floating-select {
+    font-size:14px;
+    padding:4px 4px;
+    display:block;
+    width:100%;
+    height:30px;
+    background-color: transparent;
+    border:none;
+    border-bottom:1px solid#0275D8;
+}
+
+.floating-input:focus , .floating-select:focus {
+    outline:none;
+    border-bottom:2px solid #0275D8; 
+}
+
+.login-label {
+    color:#999; 
+    font-size:14px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:5px;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+}
+
+.floating-input:focus ~ label, .floating-input:not(:placeholder-shown) ~ label {
+    top:-18px;
+    font-size:12px;
+    color: #0275D8;
+}
+
+.floating-select:focus ~ label , .floating-select:not([value=""]):valid ~ label {
+    top:-18px;
+    font-size:14px;
+    color: #0275d8;
+}
+
+
+
+
+/****  floating-Lable style end ****/
+
+.password {
+    float: right;
+    margin-top: -25px;
 }
