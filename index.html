@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!-- declare the character encoding -->
     <meta charset="utf-8">
@@ -38,9 +37,9 @@
 
             <div class="header__area">
                 <div class="header__text">
-                    <div class="header__primaryText"> Hồ Chí Minh city
+                    <div class="header__primary-text"> Hồ Chí Minh city
                     </div>
-                    <div class="header__secondaryText"> Vietnam
+                    <div class="header__secondary-text"> Vietnam
                     </div>
                 </div>
                 <i class="header__compass header__compass--spin far fa-compass"></i>
@@ -49,14 +48,14 @@
         </div>
         <div class="header__right">
             <!-- Button trigger modal -->
-            <button class="header__loginButton" data-toggle="modal" data-target="#userLogin">Login</button>
+            <button class="header__login-button" data-toggle="modal" data-target="#userLogin">Login</button>
             <!-- Modal -->
             <div class="modal fade" id="userLogin" tabindex="-1" role="dialog" aria-labelledby="userLoginLabel"
                 aria-hidden="true">
                 <div class="modal-dialog " role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h4 class="modal-title" id="userLoginLabel">Log In</h4>
+                            <h4 class="modal-title" id="userLoginLabel">Login</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -67,19 +66,21 @@
                                 <label class="login-label">Email address</label>
                             </div>
                             <div class="floating-label">
-                                <input class="floating-input" type="text" placeholder=" ">
-                                <i class="fas fa-lock password "></i>
+                                <input class="floating-input" type="password" placeholder=" " id="userPW">
+                                <i class="fas fa-lock password" onclick="showHidePassword()"></i>
                                 <label class="login-label">Password</label>
                             </div>
                         </div>
-                        <button type="button" class="btn btn-primary">Login</button>
-                    
+                        <button type="button" class="btn btn-primary login-button">Login</button>
+
                     </div>
                 </div>
             </div>
         </div>
 
+
     </header>
+    <!-- Load js -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
         crossorigin="anonymous"></script>
@@ -90,6 +91,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="js/myscript.js"></script>
+
 </body>
 
 </html>

@@ -53,11 +53,11 @@ body {
     flex-direction: column;
 }
 
-.header__primaryText {
+.header__primary-text {
     font-size: 18px;
 }
 
-.header__secondaryText {
+.header__secondary-text {
     font-size: 14px;
 }
 
@@ -74,8 +74,6 @@ body {
     animation-duration: 2s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-
-
 }
 
 @keyframes spin {
@@ -93,7 +91,7 @@ body {
     justify-content: flex-end;
 }
 
-.header__loginButton {
+.header__login-button {
     font-family: Arial;
     font-size: 14px;
     text-align: center;
@@ -101,9 +99,7 @@ body {
     border-color: rgba(230,230,230, 0.5);
     background-color: white;
     margin: 24px;
-    padding: 12px;
-    width: max-content;
-
+    padding: 8px 12px;
 }
 
 @media (max-width: 600px) {
@@ -111,16 +107,16 @@ body {
         width: 100%;
     }
 
-    .header__center__logo {
+    .header__logo {
         margin: 24px;
     }
 
-    .header__center__area {
+    .header__area {
         margin: 24px;
         width: max-content;
     }
 
-    .header__login_button {
+    .header__loginButton {
         margin: 24px;
     }
 }
@@ -144,9 +140,9 @@ body {
 }
 
 /****  floating-Lable style start ****/
-.floating-label { 
-    position:relative; 
-    margin-bottom:20px; 
+.floating-label {
+    position:relative;
+    margin-bottom:20px;
 }
 
 .floating-input , .floating-select {
@@ -162,19 +158,19 @@ body {
 
 .floating-input:focus , .floating-select:focus {
     outline:none;
-    border-bottom:2px solid #0275D8; 
+    border-bottom:2px solid #0275D8;
 }
 
 .login-label {
-    color:#999; 
+    color:#999;
     font-size:14px;
     font-weight:normal;
     position:absolute;
     pointer-events:none;
     left:5px;
     top:5px;
-    transition:0.2s ease all; 
-    -moz-transition:0.2s ease all; 
+    transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
     -webkit-transition:0.2s ease all;
 }
 
@@ -190,12 +186,12 @@ body {
     color: #0275d8;
 }
 
-
-
-
 /****  floating-Lable style end ****/
 
 .password {
     float: right;
     margin-top: -25px;
+}
+.login-button {
+    margin: 10px;
 }
