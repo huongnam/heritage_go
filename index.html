@@ -31,24 +31,25 @@
 
 <body>
     <header class="header">
-        <div class="header__left"></div>
+        <div class="side"></div>
+
         <div class="header__center">
             <img class="header__logo" src="./assets/img/logo.png" alt="Heritage GO logo">
-
             <div class="header__area">
                 <div class="header__text">
-                    <div class="header__primary-text"> Hồ Chí Minh city
+                    <div class="header__text--primary"> Hồ Chí Minh city
                     </div>
-                    <div class="header__secondary-text"> Vietnam
+                    <div class="header__text--secondary"> Vietnam
                     </div>
                 </div>
                 <i class="header__compass header__compass--spin far fa-compass"></i>
             </div>
-
         </div>
-        <div class="header__right">
+
+        <div class="side side--right">
             <!-- Button trigger modal -->
-            <button class="header__login-button" data-toggle="modal" data-target="#userLogin">Login</button>
+            <button class="btn-login" data-toggle="modal" data-target="#userLogin">Login</button>
+         
             <!-- Modal -->
             <div class="modal fade" id="userLogin" tabindex="-1" role="dialog" aria-labelledby="userLoginLabel"
                 aria-hidden="true">
@@ -60,6 +61,7 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
+
                         <div class="modal-body">
                             <div class="floating-label">
                                 <input class="floating-input" type="text" placeholder=" ">
@@ -67,19 +69,81 @@
                             </div>
                             <div class="floating-label">
                                 <input class="floating-input" type="password" placeholder=" " id="userPW">
-                                <i class="fas fa-lock password" onclick="showHidePassword()"></i>
+                                <i class="fas fa-lock lock" onclick="showHidePassword()"></i>
                                 <label class="login-label">Password</label>
                             </div>
                         </div>
-                        <button type="button" class="btn btn-primary login-button">Login</button>
-
+                        <button type="button" class="btn btn-primary btn--long">Login</button>
                     </div>
                 </div>
             </div>
         </div>
+    </header
+    <!-- Content Section -->
+    <section class="content-section">
+        <div class="side"></div>
 
+        <div class="content">
+            <article class="post">
+                <div class="heritage">
+                    <div class="heritage__header">
+                        <img class="infor__useravatar" src="./assets/img/avatar.jpg" alt="">
+                        <div class="header__info">
+                            <div class="infor__caption">
+                                <div class="caption--name">Faifo market</div>
+                                <a class="header__translate" href="#">
+                                    <img src="./assets/img/translate.png" class="btn-translate btn-translate--shake" alt="translate">
+                                </a>
+                            </div>
+                            <div class="header__footer">
+                                <div class="footer--location">
+                                    <i class="location__icon fas fa-map-marker-alt"></i>
+                                    <p class="location__name">Hoi An, Viet Nam</p>
+                                </div>
+                                <div class="footer--year">
+                                    <i class="far fa-clock"></i>
+                                    <time class="year--canchange">1965</time>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="heritage__photograph">
+                        <img class="photograph--heritage" src="./assets/img/heritage_faifomarket.jpg" alt="">
+                    </div>
+                    <div class="heritage__reaction">
+                        <div class="reaction__like">
+                            <i class="fas fa-heart"></i>
+                            <p class="like--count">0</p>
+                        </div>
+                        <div class="reaction__comment">
+                            <i class="fas fa-comment"></i>
+                            <p class="comment--count">0</p>
+                        </div>
+                        <div class="reaction__photo">
+                            <i class="fas fa-camera"></i>
+                            <p class="photo--count">0</p>
+                        </div>
+                        <div class="reaction__bookmark">
+                            <i class="fas fa-bookmark"></i>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="heritage__comment">
+                        <form class="comment__form">
+                            <input class="form__input" type="text" placeholder="Write a comment">
+                            <button class="form__button" type="submit">
+                                <i class="fab fa-telegram-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <!-- End article article_container -->
 
-    </header>
+        <div class="side"></div>
+    </section>
+
     <!-- Load js -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
