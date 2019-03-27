@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- declare the character encoding -->
     <meta charset="utf-8">
@@ -32,9 +33,9 @@
 <body>
     <header class="header">
         <div class="side"></div>
-
         <div class="header__center">
             <img class="header__logo" src="./assets/img/logo.png" alt="Heritage GO logo">
+
             <div class="header__area">
                 <div class="header__text">
                     <div class="header__text--primary"> Hồ Chí Minh city
@@ -44,12 +45,11 @@
                 </div>
                 <i class="header__compass header__compass--spin far fa-compass"></i>
             </div>
-        </div>
 
+        </div>
         <div class="side side--right">
             <!-- Button trigger modal -->
             <button class="btn-login" data-toggle="modal" data-target="#userLogin">Login</button>
-         
             <!-- Modal -->
             <div class="modal fade" id="userLogin" tabindex="-1" role="dialog" aria-labelledby="userLoginLabel"
                 aria-hidden="true">
@@ -61,7 +61,6 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-
                         <div class="modal-body">
                             <div class="floating-label">
                                 <input class="floating-input" type="text" placeholder=" ">
@@ -69,61 +68,62 @@
                             </div>
                             <div class="floating-label">
                                 <input class="floating-input" type="password" placeholder=" " id="userPW">
-                                <i class="fas fa-lock lock" onclick="showHidePassword()"></i>
+                                <i class="fas fa-lock lock" onclick="showHidePassword()" id="lock-icon"></i>
                                 <label class="login-label">Password</label>
                             </div>
+                            <button type="button" class="btn btn-primary btn--long">Login</button>
                         </div>
-                        <button type="button" class="btn btn-primary btn--long">Login</button>
                     </div>
                 </div>
             </div>
         </div>
-    </header
+    </header>
     <!-- Content Section -->
-    <section class="content-section">
+    <section class="content_section">
         <div class="side"></div>
 
-        <div class="content">
-            <article class="post">
-                <div class="heritage">
+        <div class="article_section ">
+            <article class="article_container" id='article_container'>
+                <div class="heritage shakehaha">
                     <div class="heritage__header">
-                        <img class="infor__useravatar" src="./assets/img/avatar.jpg" alt="">
+                        <img class="infor__useravatar" src="./assets/img/avatar.jpg" alt="avt">
                         <div class="header__info">
                             <div class="infor__caption">
                                 <div class="caption--name">Faifo market</div>
                                 <a class="header__translate" href="#">
-                                    <img src="./assets/img/translate.png" class="btn-translate btn-translate--shake" alt="translate">
+                                  <img src="./assets/img/translate.png" class="btn-translate btn-translate--shake" alt="translate">
                                 </a>
+
                             </div>
                             <div class="header__footer">
                                 <div class="footer--location">
-                                    <i class="location__icon fas fa-map-marker-alt"></i>
+                                    <i class="location__icon fas fa-map-marker-alt shakehaha"></i>
                                     <p class="location__name">Hoi An, Viet Nam</p>
                                 </div>
                                 <div class="footer--year">
-                                    <i class="far fa-clock"></i>
+                                    <i class="far fa-clock shakehaha"></i>
                                     <time class="year--canchange">1965</time>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="heritage__photograph">
-                        <img class="photograph--heritage" src="./assets/img/heritage_faifomarket.jpg" alt="">
+                        <img class="photograph--heritage" src="/assets/img/heritage_faifomarket.jpg" alt="">
                     </div>
                     <div class="heritage__reaction">
                         <div class="reaction__like">
-                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-heart shakehaha"></i>
                             <p class="like--count">0</p>
                         </div>
                         <div class="reaction__comment">
-                            <i class="fas fa-comment"></i>
+                            <i class="fas fa-comment shakehaha"></i>
                             <p class="comment--count">0</p>
                         </div>
                         <div class="reaction__photo">
-                            <i class="fas fa-camera"></i>
+                            <i class="fas fa-camera shakehaha"></i>
                             <p class="photo--count">0</p>
                         </div>
-                        <div class="reaction__bookmark">
+                        <div class="reaction__bookmark shakehaha">
                             <i class="fas fa-bookmark"></i>
                         </div>
                     </div>
@@ -143,20 +143,24 @@
 
         <div class="side"></div>
     </section>
+    <footer>
 
-    <!-- Load js -->
+    </footer>
+    <!-- JQuery JS-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
         crossorigin="anonymous"></script>
-    <!-- <script src="js/heritagego-coming-soon.1.0.0.js"></script> -->
+    <!-- Ajax JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
+    <!-- Bootstrap JS-->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <!-- Custom JS -->
     <script src="./assets/js/myscript.js"></script>
-
+    <script src="./assets/js/heritagego-service.1.0.0.js"></script>
 </body>
 
 </html>
