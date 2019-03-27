@@ -1,4 +1,4 @@
-/**
+posts/**
  * CONTENTS
  *
  *
@@ -277,11 +277,11 @@ body {
     width: 100%;
 }
 
-.article_section {
+.posts {
     width: 600px;
 }
 
-.article_container {
+.post-container {
     border: solid 1px rgba(0, 0, 0, 0.195);
     border-radius: 5px;
     height: auto;
@@ -293,7 +293,7 @@ body {
         margin: 24px;
     }
 
-    .article_container {
+    .post-container {
         border: solid 1px rgba(0, 0, 0, 0.195);
         border-radius: 5px;
         width: 100%;
@@ -303,12 +303,12 @@ body {
     }
 }
 
-.heritage {
+.post-container {
     width: 100%;
     height: auto;
 }
 
-.heritage__header {
+.post__header {
     border-bottom: solid 2px rgba(0, 0, 0, 0.195);
     width: 100%;
     height: auto;
@@ -316,7 +316,7 @@ body {
     padding-left: 10px;
 }
 
-.infor__useravatar {
+.user-avt {
     width: 50px;
     height: 50px;
     margin: 22px 5px 0px 5px;
@@ -437,7 +437,7 @@ body {
     position: relative;
     border-radius: 30px;
     display: flex;
-    margin: 0 1%;
+    margin: 0 2%;
 }
 
 .form__input {
@@ -446,8 +446,8 @@ body {
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     width: 97%;
-    height: 30px;
-    padding-left: 2%;
+    height: 50px;
+    padding-left: 3%;
     padding-right: -2%;
 }
 
@@ -461,7 +461,7 @@ hr {
     border-left: none;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    padding-right: 20px;
+    padding-right: 25px;
     padding-top: 4px;
 }
 /*

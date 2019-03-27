@@ -28,14 +28,14 @@ function update_data($article_container_clone, photo) {
 
 $(document).ready(function () {
     mHeritageGoService.getPhotos({ limit: 5 }).then(function (photos) {
-        $article_container = $('#article_container');
+        $article_container = $('#post-container');
         $article_container.hide()
         $(photos).each(function () {
             var $article_container_clone = $article_container.clone();
             mHeritageGoService.getPhoto(this).then(function (photo) {
                 $article_container_clone = update_data($article_container_clone, photo);
             });
-            $article_container_clone.appendTo('.article_section');
+            $article_container_clone.appendTo('.posts');
 
         })
     }).catch(function (error) {console.log(error)})
@@ -47,14 +47,14 @@ $(window).scroll(function() {
         offset += 5;
         console.log(offset);
         mHeritageGoService.getPhotos({ limit: 5, offset: offset }).then(function (photos) {
-            $article_container = $('#article_container');
+            $article_container = $('#post-container');
             $article_container.hide()
             $(photos).each(function () {
                 var $article_container_clone = $article_container.clone();
                 mHeritageGoService.getPhoto(this).then(function (photo) {
                     $article_container_clone = update_data($article_container_clone, photo);
                 });
-                $article_container_clone.appendTo('.article_section');
+                $article_container_clone.appendTo('.posts');
 
             })
         }).catch(function (error) {console.log(error)})
