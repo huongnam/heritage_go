@@ -526,6 +526,7 @@ animation-timing-function: linear;
 animation-iteration-count: infinite;
 } */
 
+
 body.scrolled #header {
   opacity: 0.35;
   transition: opacity 0.2s;
