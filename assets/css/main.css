@@ -46,6 +46,13 @@ body {
   display: flex;
   align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
+  position: fixed;
+  z-index: 100000 !important;
+}
+
+.header--transparent {
+    opacity: 0.35
+    
 }
 
 .header__center {
@@ -124,6 +131,7 @@ body {
     background-color: white;
     margin: 24px;
     padding: 8px 12px;
+    z-index: 100001 !important;
 }
 
 .lock {
@@ -167,7 +175,6 @@ body {
     100% {
         transform: rotate(0deg);
     }
-}
 }
 
 /*------------------------------------*\
@@ -471,3 +478,12 @@ animation-duration: 0.01s;
 animation-timing-function: linear;
 animation-iteration-count: infinite;
 } */
+body.scrolled #header {
+    opacity: 0.35;
+    transition: opacity .2s;
+}
+
+body.scrolled #header:hover {
+opacity: 1.0;
+transition: opacity .2s;
+}

@@ -31,7 +31,7 @@
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="side"></div>
         <div class="header__center">
             <img class="header__logo" src="./assets/img/logo.png" alt="Heritage GO logo">
@@ -49,7 +49,7 @@
         </div>
         <div class="side side--right">
             <!-- Button trigger modal -->
-            <button class="btn-login" data-toggle="modal" data-target="#userLogin">Login</button>
+            <button class="btn-login" id="btn-login" data-toggle="modal" data-target="#userLogin" onclick="fadeHeader()" >Login</button>
             <!-- Modal -->
             <div class="modal fade" id="userLogin" tabindex="-1" role="dialog" aria-labelledby="userLoginLabel"
                 aria-hidden="true">
@@ -71,8 +71,8 @@
                                 <i class="fas fa-lock lock" onclick="showHidePassword()" id="lock-icon"></i>
                                 <label class="login-label">Password</label>
                             </div>
-                            <button type="button" class="btn btn-primary btn--long">Login</button>
                         </div>
+                        <button type="button" class="btn btn-primary btn--long">Login</button>
                     </div>
                 </div>
             </div>

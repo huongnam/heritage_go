@@ -60,3 +60,28 @@ $(window).scroll(function() {
         }).catch(function (error) {console.log(error)})
     }
 });
+
+window.addEventListener('scroll', function () {
+  document.body.classList[
+    window.scrollY > 20 ? 'add': 'remove'
+  ]('scrolled');
+});
+
+function fadeHeader() {
+    var x = document.getElementById("btn-login");
+    document.getElementById("header").className = "header header--transparent"
+
+    }
+
+
+function showHidePassword() {
+    var x = document.getElementById("userPW");
+    if (x.type === "password") {
+        x.type = "text";
+        document.getElementById("lock-icon").className = "fas fa-unlock-alt password"
+    } else {
+        x.type = "password";
+        document.getElementById("lock-icon").className = "fas fa-lock password"
+
+    }
+}
