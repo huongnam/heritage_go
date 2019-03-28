@@ -2,25 +2,25 @@ function showHidePassword() {
     var x = document.getElementById("userPW");
     if (x.type === "password") {
         x.type = "text";
-        document.getElementById("lock-icon").className = "fas fa-unlock-alt lock"
+        document.getElementById("lock-icon").className = "fas fa-unlock-alt password"
     } else {
         x.type = "password";
-        document.getElementById("lock-icon").className = "fas fa-lock lock"
+        document.getElementById("lock-icon").className = "fas fa-lock password"
 
     }
 }
 
 function update_data($article_container_clone, photo) {
     // User avatar
-    $article_container_clone.find($('.user-avt')).attr('src', 'https:' + photo.account.picture_url);
+    $article_container_clone.find($('.infor__useravatar')).attr('src', 'https:' + photo.account.picture_url);
     // Caption name
-    $article_container_clone.find($('.info__caption--text')).text(photo.title[0].content)
+    $article_container_clone.find($('.caption--name')).text(photo.title[0].content)
     // Location name
     $article_container_clone.find('.location__name').text(photo.area_name);
     // Capture time
     $article_container_clone.find('.year--canchange').text(photo.capture_time || 'N/a')
     // Heritage photo
-    $article_container_clone.find($('.post__img')).attr('src', 'https:' + photo.image_url + "?size=medium");
+    $article_container_clone.find($('.photograph--heritage')).attr('src', 'https:' + photo.image_url + "?size=medium");
     $article_container_clone.show();
     return $article_container_clone;
 }
@@ -61,29 +61,8 @@ $(window).scroll(function() {
     }
 });
 
-
 window.addEventListener('scroll', function () {
   document.body.classList[
     window.scrollY > 20 ? 'add': 'remove'
   ]('scrolled');
 });
-
-
-var content = $('.content'),
-    header = $('.header-float');
-$(content).clone().prependTo(header).addClass('blurred');
-
-var blur = 'blur(10px)';
-$('.blurred').css({
-  'background': '#fff',
-  '-webkit-filter': blur,
-  'filter': blur
-});
-
-$(document).scroll(function(){
-  var scroll = $(this).scrollTop();
-  $('.blurred').css({
-    '-webkit-transform' : 'translateY(-'+scroll+'px)',
-    'transform' : 'translateY(-'+scroll+'px)'
-  });
-})

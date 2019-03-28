@@ -38,58 +38,16 @@ body {
   #HEADER
 \*------------------------------------*/
 
-/* .header {
-position: fixed;
-top: 0;
-background-color: rgba(255, 255, 255, .35);
-height: 80px;
-width: 100%;
-color: #262626;
-display: flex;
-align-items: center;
-border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
-z-index: 1;
-backdrop-filter: blur(3px);
-overflow: hidden;
-} */
-
 .header {
-    height: 80px;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 1);
-    color: #262626;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
-    position: fixed;
-    z-index: 100001 !important;
-    overflow: hidden;
-
-}
-
-.header-float::after {
-    background: rgba(white,.5);
-    position: absolute;
-    display: block;
-    content: '';
-    top: 0; right: 0; bottom: 0; left: 0;
-    z-index: 99;
-}
-
-.header-float {
-    height: 80px;
-    width: 100%;
-    float: bottom;
-    position: fixed;
-    color: transparent;
-    z-index: 99;
-    overflow: hidden;
-}
-
-.center--float {
-    height: 80px;
-    width: 100%;
-    overflow: hidden;
+  height: 80px;
+  width: 100%;
+  background-color: white;
+  color: #262626;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
+  position: fixed;
+  z-index: 100000 !important;
 }
 
 .header--transparent {
@@ -98,10 +56,10 @@ overflow: hidden;
 }
 
 .header__center {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 600px;
 }
 
 .header__logo {
@@ -185,20 +143,12 @@ overflow: hidden;
     margin: 10px;
 }
 
-.post-btn {
+.btn-translate {
     width: 24px;
     height: 24px;
 }
 
-.post-icon {
-  font-size: 24px;
-}
-
-.post-icon--small {
-  font-size: 18px;
-}
-
-.post-btn--shake {
+.btn-translate--shake {
     animation-name: shake;
     animation-duration: 0.1s;
     animation-timing-function: linear;
@@ -302,7 +252,7 @@ overflow: hidden;
       width: max-content;
     }
 
-    .btn-login {
+    .header__loginButton {
       margin: 24px;
     }
   }
@@ -329,18 +279,14 @@ overflow: hidden;
 
 /* Heritage article */
 
-.content {
+.content_section {
     display: flex;
     width: 100%;
-    position: relative;
-    z-index: 3;
 }
 
 .posts {
     margin-top: 80px;
     width: 600px;
-    z-index: 2;
-    position: relative;
 }
 
 .post-container {
@@ -348,8 +294,6 @@ overflow: hidden;
     border-radius: 5px;
     height: auto;
     margin-top: 20px;
-    z-index: 3;
-    position: relative;
 }
 
 @media screen and (max-width: 600px){
@@ -386,7 +330,7 @@ overflow: hidden;
     margin: 22px 5px 0px 5px;
 }
 
-.post__info {
+.header__info {
     width: 100%;
     height: auto;
 }
@@ -397,39 +341,37 @@ overflow: hidden;
     margin: 0px 5px 0px 5px;
 }
 
-.info__caption {
+.infor__caption {
     display: flex;
     width: 100%;
     padding-bottom: 0px;
     margin-top: 18px;
 }
 
-.info__caption--text {
+.caption--name {
     font-weight: bold;
     width: fit-content;
     margin-left: 2%;
     margin-top: 3px;
 }
 
-.post__translate {
+.header__translate {
     height: fit-content;
     margin-left: 10px;
     margin-right: 10px;
 }
 
-.info__sub-caption {
+.header__footer {
     display: flex;
     width: 100%;
-    align-items: center;
-    justify-content: flex-start;
 }
 
-.info__sub-caption--text {
+.footer--location {
     display: flex;
 }
 
 .location__icon {
-    margin-top: 12px;
+    margin-top: 10px;
 }
 
 .location__name {
@@ -438,22 +380,22 @@ overflow: hidden;
     margin-left: 5px;
 }
 
-.post__time {
+.footer--year {
+    margin-top: 12px;
     margin-left: 15px;
-    margin-top: -5px;
 }
 
-.post__image {
+.heritage__photograph {
     width: 100%;
     height: auto;
 }
 
-.post__img {
+.photograph--heritage {
     width: 100%;
     height: auto;
 }
 
-.post__reaction {
+.heritage__reaction {
     display: flex;
     width: 100%;
     margin-top: 3.5px;
@@ -495,7 +437,7 @@ overflow: hidden;
     margin: 4px 0px 0px 5px;
 }
 
-.post__comment {
+.heritage__comment {
     margin-bottom: 20px;
 }
 
@@ -530,20 +472,20 @@ hr {
     padding-right: 25px;
     padding-top: 4px;
 }
-
-/* .shakehaha{
+/*
+.shakehaha{
 animation-name: shake;
-animation-duration: 0.5s;
+animation-duration: 0.01s;
 animation-timing-function: linear;
 animation-iteration-count: infinite;
 } */
 
 body.scrolled #header {
     opacity: 0.35;
-    transition: opacity 0.2s;
+    transition: opacity .2s;
 }
 
 body.scrolled #header:hover {
 opacity: 1.0;
-transition: opacity 0.2s;
+transition: opacity .2s;
 }
