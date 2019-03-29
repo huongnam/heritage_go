@@ -69,21 +69,17 @@ window.addEventListener('scroll', function () {
 });
 
 
-var content = $('.content'),
-    header = $('.header-float');
-$(content).clone().prependTo(header).addClass('blurred');
-
-var blur = 'blur(10px)';
-$('.blurred').css({
-  'background': '#fff',
-  '-webkit-filter': blur,
-  'filter': blur
-});
+var content = $('.site-content'),
+    header = $('.header');
+               
 
 $(document).scroll(function(){
-  var scroll = $(this).scrollTop();
+  var _scroll = $(this).scrollTop();
+  $(content).clone().prependTo(header).addClass('blurred');
   $('.blurred').css({
-    '-webkit-transform' : 'translateY(-'+scroll+'px)',
-    'transform' : 'translateY(-'+scroll+'px)'
+    '-webkit-transform' : 'translateY(-'+_scroll+'px)',
+    'transform' : 'translateY(-'+_scroll+'px)',
+    
   });
+  
 })

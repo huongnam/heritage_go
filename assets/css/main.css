@@ -53,9 +53,26 @@ z-index: 1;
 backdrop-filter: blur(3px);
 overflow: hidden;
 } */
+.site-header {
+  position: fixed;
+  display: flex;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: transparent;
+  z-index: 99;
+  
+  overflow: hidden;
+  height: 80px;
+}
+.site-header::after {
+    background: rgba(white,.5);
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: 4;
+  }
 
 .header {
-  height: 80px;
   width: 100%;
   background-color: rgba(255, 255, 255, 1);
   color: #262626;
@@ -63,10 +80,19 @@ overflow: hidden;
   align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
   position: fixed;
-  z-index: 100001 !important;
+  z-index: 10000 !important;
   overflow: hidden;
 }
-
+.header::after {
+  background: rgba(white,.5);
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: 10000;
+}
+.site-content {
+  position: relative;
+  z-index: 1;
+}
 .header-float::after {
   background: rgba(white,.5);
   position: absolute;
@@ -319,14 +345,14 @@ overflow: hidden;
 .content {
   display: flex;
   width: 100%;
-  position: relative;
-  z-index: 3;
+  position: absolute;
+  z-index: -1;
 }
 
 .posts {
   margin-top: 80px;
   width: 600px;
-  z-index: 2;
+  z-index: 3;
   position: relative;
 }
 
@@ -535,4 +561,11 @@ body.scrolled #header {
 body.scrolled #header:hover {
   opacity: 1.0;
   transition: opacity 0.2s;
+}
+
+.blurred {
+  background: rgba(white, 1);
+  filter: blur(10px);
+  width: 100%;
+  position: absolute;
 }
