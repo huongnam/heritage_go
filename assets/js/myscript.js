@@ -10,56 +10,32 @@ function showHidePassword() {
     }
 }
 
-function update_data($article_container_clone, photo) {
-    // User avatar
-    $article_container_clone.find($('.user-avt')).attr('src', 'https:' + photo.account.picture_url);
-    // Caption name
-    $article_container_clone.find($('.info__caption--text')).text(photo.title[0].content)
-    // Location name
-    $article_container_clone.find('.location__name').text(photo.area_name);
-    // Capture time
-    $article_container_clone.find('.year--canchange').text(photo.capture_time || 'N/a')
-    // Heritage photo
-    $article_container_clone.find($('.post__img')).attr('src', 'https:' + photo.image_url + "?size=medium");
-    $article_container_clone.show();
-    return $article_container_clone;
-}
 
 
 $(document).ready(function () {
-    mHeritageGoService.getPhotos({ limit: 5 }).then(function (photos) {
+    mHeritageGoService.getPhotos({ limit: 5 }).then( photos => {
         $article_container = $('#post-container');
-        $article_container.hide()
         $(photos).each(function () {
-            var $article_container_clone = $article_container.clone();
-            mHeritageGoService.getPhoto(this).then(function (photo) {
-                $article_container_clone = update_data($article_container_clone, photo);
+            mHeritageGoService.getPhoto(this).then(photo => {
+                var $article_container_clone = $article_container.clone();
+                // console.log($article_container_clone);
+                // User avatar
+                $article_container_clone.find('.user-avt').attr('src', 'https:' + photo.account.picture_url);
+                // Caption name
+                $article_container_clone.find('.info__caption--text').text(photo.title[0].content);
+                // Location name
+                $article_container_clone.find('.location__name').text(photo.area_name);
+                // Capture time
+                $article_container_clone.find('.year--canchange').text(photo.capture_time || 'N/a');
+                // Heritage photo
+                $article_container_clone.find('.post__img').attr('src', 'https:' + photo.image_url + "?size=medium");
+                $article_container_clone.removeAttr('id');
+                $('.posts').append($article_container_clone);
             });
-            $article_container_clone.appendTo('.posts');
-
         })
     }).catch(function (error) {console.log(error)})
 })
 
-var offset = 0;
-$(window).scroll(function() {
-    if($(window).scrollTop() == $(document).height() - $(window).height()) {
-        offset += 5;
-        console.log(offset);
-        mHeritageGoService.getPhotos({ limit: 5, offset: offset }).then(function (photos) {
-            $article_container = $('#post-container');
-            $article_container.hide()
-            $(photos).each(function () {
-                var $article_container_clone = $article_container.clone();
-                mHeritageGoService.getPhoto(this).then(function (photo) {
-                    $article_container_clone = update_data($article_container_clone, photo);
-                });
-                $article_container_clone.appendTo('.posts');
-
-            })
-        }).catch(function (error) {console.log(error)})
-    }
-});
 
 
 window.addEventListener('scroll', function () {
@@ -69,17 +45,31 @@ window.addEventListener('scroll', function () {
 });
 
 
-var content = $('.site-content'),
-    header = $('.site-header');
+// var content = $('.site-content'),
+//     header = $('.site-header');
                
+// $(content).clone().prependTo(header).addClass('blurred');
+// $(document).scroll(function(){
+//   var _scroll = $(this).scrollTop();
+  
+//   $('.blurred').css({
+//     '-webkit-transform' : 'translateY(-'+_scroll+'px)',
+//     'transform' : 'translateY(-'+_scroll+'px)',
+    
+//   });
+  
+// })
+
+var content = $('.content'),
+    header = $('.header-float');
+               
+$(content).clone().prependTo(header).addClass('blurred');
+
 
 $(document).scroll(function(){
-  var _scroll = $(this).scrollTop();
-  $(content).clone().prependTo(header).addClass('blurred');
+  var scroll = $(this).scrollTop();
   $('.blurred').css({
-    '-webkit-transform' : 'translateY(-'+_scroll+'px)',
-    'transform' : 'translateY(-'+_scroll+'px)',
-    
+    '-webkit-transform' : 'translateY(-'+scroll+'px)',
+    'transform' : 'translateY(-'+scroll+'px)'
   });
-  
 })

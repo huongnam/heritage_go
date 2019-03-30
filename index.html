@@ -31,9 +31,10 @@
 </head>
 
 <body>
-
-    <header class="site-header">
-    <div class="header" id="header">
+    <!-- virtual header for blurring -->
+    <div class="header-float"></div>
+    <!-- header -->
+    <header class="header" id="header">
         <div class="side"><i class="far fa-hand-scissors"></i></div>
         <div class="header__center">
             <img class="header__logo" src="./assets/img/logo.png" alt="Heritage GO logo">
@@ -51,7 +52,8 @@
         </div>
         <div class="side side--right">
             <!-- Button trigger modal -->
-            <button class="btn-login" id="btn-login" data-toggle="modal" data-target="#userLogin" onclick="fadeHeader()" >Login</button>
+            <button class="btn-login" id="btn-login" data-toggle="modal" data-target="#userLogin"
+                onclick="fadeHeader()">Login</button>
             <!-- Modal -->
             <div class="modal fade" id="userLogin" tabindex="-1" role="dialog" aria-labelledby="userLoginLabel"
                 aria-hidden="true">
@@ -79,14 +81,10 @@
                 </div>
             </div>
         </div>
-        </div>
     </header>
     <!-- Content Section -->
-    <div class="site-content">
     <section class="content">
-        <div class="side">
-        </div>
-
+        <div class="side"></div>
         <div class="posts">
             <article class="post-container" id='post-container'>
                 <div class="post">
@@ -96,7 +94,8 @@
                             <div class="info__caption">
                                 <div class="info__caption--text">Faifo market</div>
                                 <a class="post__translate" href="#">
-                                  <img src="./assets/img/translate.png" class="post-btn post-btn--shake" alt="translate">
+                                    <img src="./assets/img/translate.png" class="post-btn post-btn--shake"
+                                        alt="translate">
                                 </a>
 
                             </div>
@@ -144,10 +143,10 @@
                 </div>
             </article>
         </div>
-        <!-- End article post-container -->
+        <!-- End content -->
 
         <div class="side"></div>
-    </section></div>
+    </section>
     <footer>
 
     </footer>

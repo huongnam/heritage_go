@@ -39,41 +39,6 @@ body {
   #HEADER
 \*------------------------------------*/
 
-/* .header {
-position: fixed;
-top: 0;
-background-color: rgba(255, 255, 255, .35);
-height: 80px;
-width: 100%;
-color: #262626;
-display: flex;
-align-items: center;
-border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
-z-index: 1;
-backdrop-filter: blur(3px);
-overflow: hidden;
-} */
-.site-header {
-  position: fixed;
-  display: flex; 
-  top: 0;
-  right: 0;
-  left: 0;
-  width: 600px;
-  background: transparent;
-  z-index: 99;
-  
-  overflow: hidden;
-  height: 80px;
- 
-}
-.site-header::after {
-  background: rgba(white,.5);
-  position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
-  z-index: 4;
-}
-
 .header {
   width: 100%;
   background-color: rgba(255, 255, 255, 1);
@@ -85,43 +50,23 @@ overflow: hidden;
   z-index: 10000 !important;
   overflow: hidden;
 }
-.header::after {
-  background: rgba(white,.5);
-  position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
-  z-index: 10000;
-}
-.site-content {
-  position: relative;
-  z-index: 1;
-}
-.header-float::after {
-  background: rgba(white,.5);
-  position: absolute;
-  display: block;
-  content: '';
-  top: 0; right: 0; bottom: 0; left: 0;
-  z-index: 99;
-}
 
 .header-float {
   height: 80px;
-  width: 100%;
+  background-color: rgba(255, 255, 255, 1);
+  width: 600px;
   float: bottom;
   position: fixed;
-  color: transparent;
+  left: 50%;
+  transform: translate(-50%, 0);
   z-index: 99;
   overflow: hidden;
 }
 
-.center--float {
-  height: 80px;
-  width: 100%;
-  overflow: hidden;
-}
-
-.header--transparent {
-  opacity: 0.35
+.header-float::after {
+  background: rgba(white,.5);
+  position: absolute;
+  z-index: 99;
 }
 
 .header__center {
@@ -556,18 +501,20 @@ animation-iteration-count: infinite;
 
 
 body.scrolled #header {
-  opacity: 0.35;
+  background-color: rgba(255, 255, 255, 0.35);
   transition: opacity 0.2s;
+
 }
 
 body.scrolled #header:hover {
-  opacity: 1.0;
+  background-color: rgba(255, 255, 255, 1);
   transition: opacity 0.2s;
 }
 
 .blurred {
-  background: rgba(white, 1);
-  filter: blur(10px);
+  background: rgba(white);
+  filter: blur(50px);
   width: 100%;
   position: absolute;
+
 }
