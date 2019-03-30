@@ -55,22 +55,24 @@ overflow: hidden;
 } */
 .site-header {
   position: fixed;
-  display: flex;
+  display: flex; 
   top: 0;
   right: 0;
   left: 0;
+  width: 600px;
   background: transparent;
   z-index: 99;
   
   overflow: hidden;
   height: 80px;
+ 
 }
 .site-header::after {
-    background: rgba(white,.5);
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    z-index: 4;
-  }
+  background: rgba(white,.5);
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  z-index: 4;
+}
 
 .header {
   width: 100%;

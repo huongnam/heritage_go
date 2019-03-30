@@ -70,7 +70,7 @@ window.addEventListener('scroll', function () {
 
 
 var content = $('.site-content'),
-    header = $('.header');
+    header = $('.site-header');
                
 
 $(document).scroll(function(){
