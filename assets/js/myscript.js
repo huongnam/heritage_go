@@ -47,22 +47,22 @@ window.addEventListener('scroll', function () {
 
 // var content = $('.site-content'),
 //     header = $('.site-header');
-               
+
 // $(content).clone().prependTo(header).addClass('blurred');
 // $(document).scroll(function(){
 //   var _scroll = $(this).scrollTop();
-  
+
 //   $('.blurred').css({
 //     '-webkit-transform' : 'translateY(-'+_scroll+'px)',
 //     'transform' : 'translateY(-'+_scroll+'px)',
-    
+
 //   });
-  
+
 // })
 
 var content = $('.content'),
     header = $('.header-float');
-               
+
 $(content).clone().prependTo(header).addClass('blurred');
 
 

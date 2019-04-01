@@ -11,16 +11,16 @@ function showHidePassword() {
 }
 
 function update_data($article_container_clone, photo) {
+  // Heritage photo
+    $article_container_clone.find('.photograph--heritage').attr('src', photo.image_url + "?size=medium");
     // User avatar
-    $article_container_clone.find($('.infor__useravatar')).attr('src', 'https:' + photo.account.picture_url);
+    $article_container_clone.find('.infor__useravatar').attr('src', photo.account.picture_url);
     // Caption name
-    $article_container_clone.find($('.caption--name')).text(photo.title[0].content)
+    $article_container_clone.find('.caption--name').text(photo.title[0].content)
     // Location name
     $article_container_clone.find('.location__name').text(photo.area_name);
     // Capture time
     $article_container_clone.find('.year--canchange').text(photo.capture_time || 'N/a')
-    // Heritage photo
-    $article_container_clone.find($('.photograph--heritage')).attr('src', 'https:' + photo.image_url + "?size=medium");
     $article_container_clone.show();
     return $article_container_clone;
 }
@@ -43,6 +43,7 @@ $(document).ready(function () {
 
 var offset = 0;
 $(window).scroll(function() {
+  console.log($(window).scrollTop());
     if($(window).scrollTop() == $(document).height() - $(window).height()) {
         offset += 5;
         console.log(offset);
