@@ -466,6 +466,7 @@ window.addEventListener('scroll', function () {
 });
 
 var content = $('.content'),
+
     header = $('.header-float');
 
 $(content).clone().prependTo(header).addClass('blurred');
