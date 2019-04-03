@@ -628,3 +628,45 @@ body.scrolled #header:hover {
     zoom: 50%;
   }
 } */
+
+
+.post-btn:hover, .post-btn:focus {
+
+
+  animation-duration: 0s;
+}
+
+.language-input {
+
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+.language-input:focus {outline: 3px solid #ddd;}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1000000;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.post__translate a:hover {background-color: #ddd;}
+
+.show {display: block;}
+

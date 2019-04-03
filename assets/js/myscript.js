@@ -433,7 +433,7 @@ function update_content(selected_section, limit, {
 $(document).ready(function () {
     // Get photos form HeritageService
     limit = 5;
-    update_content($('.posts'), limit, {offset: offset});
+    update_content($('.posts'), limit, { offset: offset });
     offset = limit;
 });
 
@@ -460,9 +460,9 @@ $(window).scroll(function () {
 // }
 
 window.addEventListener('scroll', function () {
-  document.body.classList[
-    window.scrollY > 20 ? 'add': 'remove'
-  ]('scrolled');
+    document.body.classList[
+        window.scrollY > 20 ? 'add' : 'remove'
+    ]('scrolled');
 });
 
 var content = $('.content'),
@@ -472,10 +472,33 @@ var content = $('.content'),
 $(content).clone().prependTo(header).addClass('blurred');
 
 
-$(document).scroll(function(){
-  var scroll = $(this).scrollTop();
-  $('.blurred').css({
-    '-webkit-transform' : 'translateY(-'+scroll+'px)',
-    'transform' : 'translateY(-'+scroll+'px)'
-  });
+$(document).scroll(function () {
+    var scroll = $(this).scrollTop();
+    $('.blurred').css({
+        '-webkit-transform': 'translateY(-' + scroll + 'px)',
+        'transform': 'translateY(-' + scroll + 'px)'
+    });
 })
+
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function showLanguage() {
+    // $(translateIcon).removeClass("post-btn--shake");
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("myDropdown");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+        txtValue = a[i].textContent || a[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+        } else {
+            a[i].style.display = "none";
+        }
+    }
+}
