@@ -328,6 +328,7 @@ body {
   height: fit-content;
   margin-left: 10px;
   margin-right: 10px;
+  z-index: 1000000;
 }
 
 .info__sub-caption {
@@ -669,4 +670,3 @@ body.scrolled #header:hover {
 .post__translate a:hover {background-color: #ddd;}
 
 .show {display: block;}
-

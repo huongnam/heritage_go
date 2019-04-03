@@ -466,7 +466,6 @@ window.addEventListener('scroll', function () {
 });
 
 var content = $('.content'),
-
     header = $('.header-float');
 
 $(content).clone().prependTo(header).addClass('blurred');
@@ -484,14 +483,20 @@ $(document).scroll(function () {
 toggle between hiding and showing the dropdown content */
 function showLanguage() {
     // $(translateIcon).removeClass("post-btn--shake");
-    document.getElementById("myDropdown").classList.toggle("show");
+    $('.post__translate').click(function(){
+        var dropdown = $(this).parent();
+        var dropdown_content = dropdown.find('.dropdown-content').toggleClass('show');
+    });
+    // document.getElementById("myDropdown").classList.toggle("show");
 }
 
 function filterFunction() {
     var input, filter, ul, li, a, i;
-    input = document.getElementById("myInput");
+    // input = document.getElementById("myInput");
+    var input = dropdown.find('.language-input')
     filter = input.value.toUpperCase();
-    div = document.getElementById("myDropdown");
+    // div = document.getElementById("myDropdown");
+    var div = dropdown.find('.dropdown-content')
     a = div.getElementsByTagName("a");
     for (i = 0; i < a.length; i++) {
         txtValue = a[i].textContent || a[i].innerText;
